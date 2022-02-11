@@ -1,16 +1,6 @@
 <template>
   <div
-    class="
-      backdrop-blur-md
-      bg-blue-200/30
-      text-yellow-200
-      p-8
-      rounded-lg
-      shadow
-      transition
-      duration-1000
-      scale-100
-    "
+    class="text-yellow-200 p-8 transition duration-1000 scale-100"
     :class="{ 'opacity-40 scale-95': isLoading }"
   >
     {{ text }}
@@ -60,6 +50,7 @@ export default {
         // console.log(data);
         this.isLoading = false;
         this.fact = data.fact;
+        if (this.fact) this.error = null;
 
         if (this.keepRunning) {
           await sleep(5000);

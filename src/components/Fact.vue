@@ -1,7 +1,7 @@
 <template>
   <div
     class="text-yellow-200 p-8 transition duration-1000 scale-100"
-    :class="{ 'opacity-40 scale-95': isLoading }"
+    :class="{ 'opacity-40 scale-0': isLoading }"
   >
     {{ text }}
   </div>
